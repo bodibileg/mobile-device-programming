@@ -11,25 +11,54 @@
         android:layout_height="match_parent"
         android:padding="16dp">
 
-        <Button
-            android:id="@+id/button_first"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/next"
-            app:layout_constraintBottom_toTopOf="@id/textview_first"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
         <TextView
             android:id="@+id/textview_first"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/start_string"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/editText_guess"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:autofillHints="text"
+            android:hint="@string/guess_input_string"
+            android:inputType="text"
+            app:layout_constraintTop_toBottomOf="@id/textview_first" />
+
+        <Button
+            android:id="@+id/button_guess"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="@string/lorem_ipsum"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
+            android:text="@string/button_guess"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/button_first" />
+            app:layout_constraintTop_toBottomOf="@id/editText_guess" />
+
+        <EditText
+            android:id="@+id/editText_add"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:autofillHints="text"
+            android:hint="@string/add_input_string"
+            android:inputType="text"
+            app:layout_constraintTop_toBottomOf="@id/button_guess" />
+
+        <Button
+            android:id="@+id/button_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/button_add"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/editText_add" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/chemical_image_description"
+            android:src="@drawable/chemical_image"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/button_add" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.core.widget.NestedScrollView>
