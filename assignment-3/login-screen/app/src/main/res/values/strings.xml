@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">E-Commerce</string>
+    <string name="sign_text">Sign in to <b>Zappos.com</b> using your Amazon account</string>
+    <string name="sign_title">Sign in</string>
+    <string name="forgot_password_text">Forgot password?</string>
+    <string name="username_hint">Email (phone for mobile accounts)</string>
+    <string name="password_hint">Amazon password</string>
+    <string name="show_text">Show password</string>
+    <string name="keep_text">Keep me signed in</string>
+    <string name="create_button_text">Create a new Amazon account</string>
+    <string name="copyright_text">1996-2017, Amazon.com, Inc. or its affiliates</string>
+
+
+</resources>
