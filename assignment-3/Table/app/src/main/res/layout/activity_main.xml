@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/editTextWaterResourceName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Water Resource Name" />
+
+    <EditText
+        android:id="@+id/editTextLocation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Location" />
+
+    <EditText
+        android:id="@+id/editTextType"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Type" />
+
+    <Button
+        android:id="@+id/buttonSubmit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Submit" />
+
+    <TableLayout
+        android:id="@+id/tableLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:paddingHorizontal="10dp"
+        android:stretchColumns="1">
+
+        <TableRow android:background="@color/black">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="1px"
+                android:background="@color/white"
+                android:gravity="center"
+                android:padding="3dp"
+                android:text="Water Resource Name" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="1px"
+                android:background="@color/white"
+                android:gravity="center"
+                android:padding="3dp"
+                android:text="Location" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="1px"
+                android:background="@color/white"
+                android:gravity="center"
+                android:padding="3dp"
+                android:text="Type" />
+
+        </TableRow>
+
+        <TableRow android:background="@color/black">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="1px"
+                android:background="@color/white"
+                android:gravity="center"
+                android:padding="3dp"
+                android:text="River Ganges" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="1px"
+                android:background="@color/white"
+                android:gravity="center"
+                android:padding="3dp"
+                android:text="Varanasi, India" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="1px"
+                android:background="@color/white"
+                android:gravity="center"
+                android:padding="3dp"
+                android:text="River" />
+        </TableRow>
+    </TableLayout>
+</LinearLayout>
