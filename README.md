@@ -21,3 +21,14 @@ Assignments are in their separate folders. See screenshots below.
 ### Shop Screen
 
 ![image](https://github.com/bodibileg/mobile-device-programming/assets/25266669/8a62aa9e-a0ad-4608-a6d4-3c0a26ae83d5)
+
+## Assignment 5
+
+### Survey
+
+![Screenshot from 2024-03-10 23-51-14](https://github.com/bodibileg/mobile-device-programming/assets/25266669/572d2fca-ad42-4de3-ba63-9ade4c345f23)
+![image](https://github.com/bodibileg/mobile-device-programming/assets/25266669/b13dd66b-1019-411d-942d-1fe96c15ed4f)
+
+### Electronic Gadgets
+
+![Screenshot from 2024-03-10 23-46-06](https://github.com/bodibileg/mobile-device-programming/assets/25266669/fe10e872-8f47-4142-80f7-7455daf51cae)
