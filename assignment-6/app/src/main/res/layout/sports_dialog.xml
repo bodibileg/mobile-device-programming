@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <Spinner
+        android:id="@+id/add_sport_type_spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:id="@+id/add_sport_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Sport Name" />
+
+    <EditText
+        android:id="@+id/add_sport_instruction"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:hint="Sport Instruction" />
+
+</LinearLayout>

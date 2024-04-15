@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">The Sport News and Information</string>
+    <string name="action_settings">Settings</string>
+
+    <string-array name="sport_types">
+        <item>Measure</item>
+        <item>Precision</item>
+        <item>Spectacle</item>
+        <item>Combat</item>
+        <item>Play</item>
+    </string-array>
+</resources>
