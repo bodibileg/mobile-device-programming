@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".ui.DashboardFragment">
+
+    <Button
+        android:id="@+id/btn_animal_details"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="16dp"
+        android:background="@drawable/pill_button"
+        android:padding="16dp"
+        android:text="Animal Details"
+        android:textColor="#FFFFFF" />
+
+    <Button
+        android:id="@+id/btn_species_details"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="16dp"
+        android:background="@drawable/pill_button"
+        android:padding="16dp"
+        android:text="Species Details"
+        android:textColor="#FFFFFF" />
+
+</LinearLayout>
