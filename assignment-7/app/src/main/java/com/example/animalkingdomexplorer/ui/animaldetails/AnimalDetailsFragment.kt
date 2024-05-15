@@ -51,26 +51,61 @@ class AnimalDetailsFragment : Fragment() {
         val addHabitat = dialogView.findViewById<EditText>(R.id.add_habitat)
         val addDiet = dialogView.findViewById<EditText>(R.id.add_diet)
 
-        AlertDialog.Builder(requireContext())
+        val dialog = AlertDialog.Builder(requireContext())
             .setTitle("Add Animal")
             .setView(dialogView)
-            .setPositiveButton("Save") { dialog, _ ->
-                val animalName = addAnimalName.text.toString()
-                val animalHabitat = addHabitat.text.toString()
-                val animalDiet = addDiet.text.toString()
-
-                val newAnimal = Animal(0, animalName, animalHabitat, animalDiet)
-                animalViewModel.insert(newAnimal)
-
-                animalViewModel.allAnimals.observe(viewLifecycleOwner) { animals ->
-                    binding.animalsView.adapter = AnimalAdapter(animals)
-                }
-                Toast.makeText(this.context, "Animal added successfully", Toast.LENGTH_SHORT).show()
-                dialog.dismiss()
-            }
+            .setPositiveButton("Save", null) // We set onClickListener to null for now
             .setNegativeButton("Cancel") { dialog, _ ->
                 dialog.dismiss()
             }
-            .show()
+            .create()
+
+        dialog.setOnShowListener { // Setting validation and action on positive button click here
+            val saveButton = dialog.getButton(AlertDialog.BUTTON_POSITIVE)
+            saveButton.setOnClickListener {
+                val animalName = addAnimalName.text.toString().trim()
+                val animalHabitat = addHabitat.text.toString().trim()
+                val animalDiet = addDiet.text.toString().trim()
+
+                if (validateAnimalFields(animalName, animalHabitat, animalDiet, addAnimalName, addHabitat, addDiet)) {
+                    val newAnimal = Animal(0, animalName, animalHabitat, animalDiet)
+                    animalViewModel.insert(newAnimal)
+
+                    Toast.makeText(
+                        requireContext(),
+                        "Animal added successfully",
+                        Toast.LENGTH_SHORT
+                    ).show()
+                    dialog.dismiss()
+                }
+            }
+        }
+
+        dialog.show()
     }
+
+    private fun validateAnimalFields(name: String, habitat: String, diet: String, nameEditText: EditText, habitatEditText: EditText, dietEditText: EditText): Boolean {
+        var isValid = true
+
+        if (name.isEmpty()) {
+            nameEditText.error = "Name is required"
+            nameEditText.requestFocus()
+            isValid = false
+        }
+
+        if (habitat.isEmpty()) {
+            habitatEditText.error = "Habitat is required"
+            habitatEditText.requestFocus()
+            isValid = false
+        }
+
+        if (diet.isEmpty()) {
+            dietEditText.error = "Diet is required"
+            dietEditText.requestFocus()
+            isValid = false
+        }
+
+        return isValid
+    }
+
 }

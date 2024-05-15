@@ -1,18 +1,26 @@
 package com.example.animalkingdomexplorer.data.repository
 
+import android.app.Application
 import androidx.annotation.WorkerThread
 import androidx.lifecycle.LiveData
+import com.example.animalkingdomexplorer.data.dao.AnimalDao
 import com.example.animalkingdomexplorer.data.dao.SpeciesDao
+import com.example.animalkingdomexplorer.data.database.AppDatabase
+import com.example.animalkingdomexplorer.data.model.Animal
 import com.example.animalkingdomexplorer.data.model.Species
 import kotlinx.coroutines.flow.Flow
 
-class SpeciesRepository(private val speciesDao: SpeciesDao) {
+class SpeciesRepository(application: Application) {
+    private val speciesDao: SpeciesDao
+    val allSpecies: LiveData<List<Species>>
 
-    val allSpecies: LiveData<List<Species>> = speciesDao.getAllSpecies()
+    init {
+        val db = AppDatabase.getDatabase(application)
+        speciesDao = db.speciesDao()
+        allSpecies = speciesDao.getAllSpecies()
+    }
 
-    @Suppress("RedundantSuspendModifier")
-    @WorkerThread
-    suspend fun insert(species: Species) {
+    suspend fun insert(species: Species){
         speciesDao.addSpecies(species)
     }
 }

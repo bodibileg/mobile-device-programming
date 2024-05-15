@@ -9,20 +9,21 @@ import androidx.navigation.fragment.findNavController
 import com.example.animalkingdomexplorer.databinding.FragmentDashboardBinding
 
 class DashboardFragment : Fragment() {
-    private lateinit var binding:  FragmentDashboardBinding
+    private lateinit var binding: FragmentDashboardBinding
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
         binding = FragmentDashboardBinding.inflate(inflater, container, false)
         binding.apply {
             btnAnimalDetails.setOnClickListener {
-                val directions = DashboardFragmentDirections.actionDashboardFragmentToAnimalDetailsFragment()
+                val directions =
+                    DashboardFragmentDirections.actionDashboardFragmentToAnimalDetailsFragment()
                 findNavController().navigate(directions)
             }
             btnSpeciesDetails.setOnClickListener {
-                val directions = DashboardFragmentDirections.actionDashboardFragmentToSpeciesDetailsFragment()
+                val directions =
+                    DashboardFragmentDirections.actionDashboardFragmentToSpeciesDetailsFragment()
                 findNavController().navigate(directions)
             }
         }

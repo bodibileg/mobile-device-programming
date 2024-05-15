@@ -1,7 +1,6 @@
 package com.example.animalkingdomexplorer.ui.animaldetails
 
 import android.app.Application
-import android.util.Log
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModel
@@ -23,6 +22,5 @@ class AnimalViewModel(application: Application) : AndroidViewModel(application) 
 
     fun insert(animal: Animal) = viewModelScope.launch {
         repository.insert(animal)
-        Log.d("AnimalViewModel", "Animal inserted, fetching updated list...")
     }
 }

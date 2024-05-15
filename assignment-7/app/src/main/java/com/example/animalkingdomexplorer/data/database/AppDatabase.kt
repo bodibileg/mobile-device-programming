@@ -5,13 +5,10 @@ import android.util.Log
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
-import androidx.sqlite.db.SupportSQLiteDatabase
 import com.example.animalkingdomexplorer.data.dao.AnimalDao
 import com.example.animalkingdomexplorer.data.dao.SpeciesDao
 import com.example.animalkingdomexplorer.data.model.Animal
 import com.example.animalkingdomexplorer.data.model.Species
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.launch
 
 @Database(entities = [Animal::class, Species::class], version = 1)
 abstract class AppDatabase : RoomDatabase() {
