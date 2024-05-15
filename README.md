@@ -14,11 +14,11 @@ The Animal Kingdom Explorer app utilizes modern Android development techniques a
 - Coroutines: Used for asynchronous operations, enhancing app responsiveness.
 
 ## Screenshots
-![Home](./pics/1.png)
-![Animal](./pics/2.png)
-![Animal Validation](./pics/3.png)
-![Species](./pics/4.png)
-![Species Validation](./pics/5.png)
+<img src="./pics/1.png" width="300">
+<img src="./pics/2.png" width="300">
+<img src="./pics/3.png" width="300">
+<img src="./pics/4.png" width="300">
+<img src="./pics/5.png" width="300">
 
 ## Instructions
 
